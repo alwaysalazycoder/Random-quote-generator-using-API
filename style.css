@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+.container{
+    /* position: absolute; */
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 192, 203, 0.288);
+    /* background-color: rgb(56, 55, 55);
+    background-color: rgb(37, 9, 14); */
+    
+
+}
+.wave{
+    position: absolute;
+    height: 40vh;
+    width: 40vh;
+    border-radius: 40%;
+    /* background-color: rgb(189, 122, 163);
+     */
+     background-color: rgb(235, 111, 132);
+    
+    opacity: 0.2;
+    left: 80%;
+    top: 65%;
+    animation:drift 3s infinite linear;
+    
+}
+.two{
+    height: 44vh;
+    width: 42vh;
+    border-radius: 48%;
+    animation: drift 1s infinite linear;
+    opacity: 0.1 !important;
+}
+.wave2{
+    position: absolute;
+    height: 40vh;
+    width: 40vh;
+    border-radius: 40%;
+    /* background-color: rgb(189, 122, 163);
+     */
+     background-color: rgb(235, 111, 132);
+    opacity: 0.2;
+    left: -25%;
+    top: -35%;
+    animation:drift 3s infinite linear;
+
+}
+.one2{
+    height: 44vh;
+    width: 45vh;
+    border-radius: 45%;
+    animation: drift 3s infinite linear;
+    opacity: 0.2 !important;
+
+}
+.two2{
+    height: 44vh;
+    width: 42vh;
+    border-radius: 47%;
+    animation: drift 5s infinite linear;
+    opacity: 0.1 !important;
+}
+@keyframes drift {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+    
+}
+    
+.box{
+    position: relative;
+    overflow: hidden;
+    height: 60vh;
+    width: 45vw;
+    background-color: rgba(255, 192, 203, 0.459);
+    /* background-color: aqua; */
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 3);
+}
+.logo{
+    display: flex;
+    flex-direction: row;
+    align-self:flex-end;
+    
+}
+.logo img{
+    width: 100px;
+    margin: 0;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 50px;
+    height: 30vh;
+}
+.author{
+    margin: 10px;
+}
+
+#quotes {
+    font-size: larger;
+    margin: 10px;;
+}
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* display: inline; */
+    /* background-color: pink; */
+}
+button{
+    background-color: pink;
+    height: 60px;
+    width: 100px;
+    border-radius: 29px;
+    border: none;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1);
+    transform: translate(1.1);
+    transition: all .3s ease-out;
+}
+button:hover{
+    transform: translate(1.8);
+    cursor: pointer;
+}
+img:hover{
+    cursor: pointer;
+}
+#mode{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+  
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  /* background-color: #2196F3; */
+  background-color: black;
+}
+
+input:focus + .slider {
+  /* box-shadow: 0 0 1px #2196F3; */
+  box-shadow: 0 0 1px black;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.mode p{
+    padding-top: 10px;
+}
