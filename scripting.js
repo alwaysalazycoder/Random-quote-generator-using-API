@@ -7,7 +7,6 @@ const box = document.getElementById("box");
 const container = document.getElementById("container");
 // const refresh = document.getElementById("refresh");
 
-
 let realData = "";
 let quotedata = "";
 
